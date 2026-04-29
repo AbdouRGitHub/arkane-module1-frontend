@@ -1,0 +1,20 @@
+<svg
+  width="300"
+  height="100"
+  viewBox="0 0 300 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <text
+    x="150"
+    y="65"
+    font-family="'Inter', 'Arial', sans-serif"
+    font-size="56"
+    font-weight="800"
+    fill="#ffffff"
+    letter-spacing="6"
+    text-anchor="middle"
+  >
+    ARKANE
+  </text>
+</svg>
