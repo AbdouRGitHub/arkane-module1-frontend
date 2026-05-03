@@ -1,4 +1,4 @@
-import {createFileRoute} from '@tanstack/react-router'
+import {createFileRoute, useNavigate} from '@tanstack/react-router'
 import FileDropZone from "#/components/FileDropZone.tsx";
 import {DownloadExampleFileButton} from "#/components/DownloadExampleFileButton.tsx";
 import {useState} from "react";
@@ -10,6 +10,8 @@ export const Route = createFileRoute('/')({component: Home})
 function Home() {
     //const [exampleFile, setExampleFile] = useState<File | null>(null);
     const [previewData, setPreviewData] = useState<any[]>([]);
+    const navigate = useNavigate({from: '/'})
+
 
     const handleFile = (file: File) => {
         Papa.parse(file, {
@@ -18,6 +20,7 @@ function Home() {
                 console.log(results.data);
             },
         });
+        navigate({to: '/result'});
     }
 
     return (
